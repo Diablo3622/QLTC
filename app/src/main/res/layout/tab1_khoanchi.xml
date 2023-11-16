@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E4EADE"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtLuongDaNhap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#A903A9F4"
+                android:gravity="center"
+                android:text="Khoản Chi"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2*" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Tên Khoản Chi:"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/loaiKhoanChi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số Tiền:"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edtSoTienKhoanChi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/txtvn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VND"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold"/>
+
+                    <requestFocus />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRowtr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <TextView
+                        android:id="@+id/textViewtr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày Thu:"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editNgayChi"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date"
+                        android:text="10/11/2015"
+                        android:textColor="#FF0000" />
+
+                    <Button
+                        android:id="@+id/btnChonNgay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textStyle="bold"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRowGhiChu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" >
+
+                    <TextView
+                        android:id="@+id/textViewGhiChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ghi Chú:"
+                        android:textStyle="bold"/>
+					<EditText
+                        android:id="@+id/edtGhiChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:ems="10"
+                        android:inputType="text" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#8061AED1" />
+
+            <Button
+                android:id="@+id/btnThemKhoanChi"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:text="Thêm khoản chi"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
