@@ -2,41 +2,42 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#E4EADE"
+    android:background="#FFF0E1"
     android:orientation="vertical" >
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="493dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txtLuongDaNhap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#A903A9F4"
+                android:background="#5E93AC"
                 android:gravity="center"
-                android:text="Khoản Chi"
+                android:text="Màn hình Khoản Chi"
                 android:textColor="#FFFFFF"
-                android:textSize="27dp" />
+                android:textSize="25dp"
+                android:textStyle="italic" />
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchColumns="2*" >
+                android:layout_height="461dp"
+                android:stretchColumns="2*">
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="Tên Khoản Chi:"
-                    android:textStyle="bold"/>
+                    android:text="Tên Khoản Thu:"
+                    android:textSize="20dp" />
 
                 <Spinner
                     android:id="@+id/loaiKhoanChi"
@@ -47,19 +48,20 @@
                     android:id="@+id/tableRow2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp" >
+                    android:layout_margin="10dp">
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Số Tiền:"
-                        android:textStyle="bold"/>
+                        android:textSize="20dp" />
 
                     <EditText
                         android:id="@+id/edtSoTienKhoanChi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:layout_span="2"
                         android:ems="10"
                         android:inputType="number" />
@@ -69,8 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="VND"
-                        android:textColor="#FF0000"
-                        android:textStyle="bold"/>
+                        android:textColor="#FF0000" />
 
                     <requestFocus />
                 </TableRow>
@@ -78,48 +79,61 @@
                 <TableRow
                     android:id="@+id/tableRowtr"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp" >
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
 
                     <TextView
                         android:id="@+id/textViewtr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ngày Thu:"
-                        android:textStyle="bold"/>
+                        android:textSize="18dp"
+                        android:text="Ngày Chi:" />
 
-                    <EditText
-                        android:id="@+id/editNgayChi"
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="date"
-                        android:text="10/11/2015"
-                        android:textColor="#FF0000" />
 
-                    <Button
-                        android:id="@+id/btnChonNgay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Date"
-                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="276dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <NumberPicker
+                            android:id="@+id/yearPicker"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <NumberPicker
+                            android:id="@+id/monthPicker"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <NumberPicker
+                            android:id="@+id/dayPicker"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+
                 </TableRow>
+
                 <TableRow
                     android:id="@+id/tableRowGhiChu"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp" >
+                    android:layout_height="350dp"
+                    android:layout_margin="10dp">
 
                     <TextView
                         android:id="@+id/textViewGhiChu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ghi Chú:"
-                        android:textStyle="bold"/>
-					<EditText
+                        android:text="Ghi Chú:" />
+
+                    <EditText
                         android:id="@+id/edtGhiChu"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="250dp"
                         android:layout_span="2"
                         android:ems="10"
                         android:inputType="text" />
@@ -129,18 +143,19 @@
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#8061AED1" />
+                android:layout_height="142dp"
+                android:background="#E1E1E1" />
 
-            <Button
-                android:id="@+id/btnThemKhoanChi"
-                android:layout_width="173dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginRight="20dp"
-                android:text="Thêm khoản chi"
-                android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/btnThemKhoanChi"
+        android:layout_width="173dp"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/grey"
+        android:text="Thêm khoản chi" />
 
 </LinearLayout>

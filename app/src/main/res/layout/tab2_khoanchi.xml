@@ -7,18 +7,17 @@
   <TextView
       android:id="@+id/textView1"
       android:layout_width="match_parent"
-      android:layout_height="47dp"
-      android:background="#A903A9F4"
+      android:layout_height="wrap_content" android:background="#5E93AC"
       android:gravity="center"
       android:text="Màn hình Khoản Chi"
-      android:textColor="#FFFFFF"
       android:textSize="25dp"
-      android:textStyle="italic" />
-  
-    <ListView
-        android:id="@+id/listKhoanChi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+      android:textStyle="italic"
+      android:textColor="#FFFFFF" />
+
+  <ListView
+      android:id="@+id/listKhoanChi"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+  </ListView>
 
 </LinearLayout>
