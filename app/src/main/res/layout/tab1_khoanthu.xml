@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF0E1"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="493dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#5E93AC"
+                android:gravity="center"
+                android:text="Màn hình Khoản Thu"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="461dp"
+                android:stretchColumns="2*">
+
+                <TextView
+                    android:id="@+id/txtLuongDaNhap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Tên Khoản Thu:"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/loaiKhoanThu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số Tiền:"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edtSoTienKhoanThu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_span="2"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/txtvn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VND"
+                        android:textColor="#FF0000" />
+
+                    <requestFocus />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRowtr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/textViewtr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Ngày Thu:" />
+
+
+                    <LinearLayout
+                        android:layout_width="276dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <NumberPicker
+                            android:id="@+id/yearPicker"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <NumberPicker
+                            android:id="@+id/monthPicker"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <NumberPicker
+                            android:id="@+id/dayPicker"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRowGhiChu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="350dp"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/textViewGhiChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ghi Chú:" />
+
+                    <EditText
+                        android:id="@+id/edtGhiChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_span="2"
+                        android:ems="10"
+                        android:inputType="text" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                android:background="#E1E1E1" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnThemKhoanThu"
+        android:layout_width="173dp"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/grey"
+        android:text="Thêm khoản thu" />
+
+</LinearLayout>
