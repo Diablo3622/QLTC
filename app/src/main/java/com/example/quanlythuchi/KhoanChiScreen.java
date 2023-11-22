@@ -20,11 +20,11 @@ public class KhoanChiScreen extends Activity {
 		setContentView(R.layout.activity_khoan_chi_screen);
 
 		loadTabs();
-		NumberPicker yearPicker = findViewById(R.id.yearPicker);
+		NumberPicker yearPicker = findViewById(R.id.year);
 		yearPicker.setTextSize(50);
-		NumberPicker monthPicker = findViewById(R.id.monthPicker);
+		NumberPicker monthPicker = findViewById(R.id.month);
 		monthPicker.setTextSize(50);
-		NumberPicker dayPicker = findViewById(R.id.dayPicker);
+		NumberPicker dayPicker = findViewById(R.id.day);
 		dayPicker.setTextSize(50);
 
 		// Lấy năm hiện tại
@@ -74,9 +74,7 @@ public class KhoanChiScreen extends Activity {
 		String date = year + "/" + month + "/" + day;
 		Toast.makeText(this, "Ngày tháng năm đã chọn: " + date, Toast.LENGTH_SHORT).show();
 
-		// Thực hiện các xử lý khác sau khi đã chọn ngày tháng năm
-		// Ví dụ: gọi hàm để cập nhật dữ liệu khác
-		// updateOtherData();
+
 	}
 
 	

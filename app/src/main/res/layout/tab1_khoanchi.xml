@@ -97,19 +97,19 @@
                         android:orientation="horizontal">
 
                         <NumberPicker
-                            android:id="@+id/yearPicker"
+                            android:id="@+id/year"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1" />
 
                         <NumberPicker
-                            android:id="@+id/monthPicker"
+                            android:id="@+id/month"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1" />
 
                         <NumberPicker
-                            android:id="@+id/dayPicker"
+                            android:id="@+id/day"
                             android:layout_width="30dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1" />
