@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QL</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="title_activity_luong">Luong</string>
+    <string name="tieuDeLuong">Vui lòng nhập lương của bạn:</string>
+    <string name="title_activity_menu_screen">MenuScreen</string>
+    <string name="title_activity_them_thu_chi_screen">ThemThuChiScreen</string>
+    <string name="title_activity_khoan_chi_screen">Quản Lý Khoản Chi</string>
+    <string name="title_activity_khoan_thu_screen">Quản Lý Khoản Thu</string>
+    <string name="title_activity_thong_ke_screen">Thống Kê</string>
+    <string name="title_activity_luong_screen">Lương</string>
+    <string name="title_activity_them_loai_thu">ThemLoaiThu</string>
+    <string name="title_activity_them_the_loai_thu">ThemTheLoaiThu</string>
+    <string name="tieuDeLoaiThu">Màn Hình Thể Loại Thu</string>
+    <string name="tenTheLoaiThu">Tên Thể Loại Thu</string>
+    <string name="title_activity_them_loai_chi">ThemLoaiChi</string>
+    <string name="tieuDeLoaiChi">Màn Hình Thể Loại Chi</string>
+    <string name="tenLoaiChi">Tên Thể Loại Chi</string>
+
+</resources>
