@@ -152,7 +152,6 @@
     <Button
         android:id="@+id/btnThemKhoanChi"
         android:layout_width="173dp"
-
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/grey"
