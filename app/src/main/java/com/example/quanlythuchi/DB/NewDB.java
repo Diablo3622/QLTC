@@ -7,7 +7,6 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
 public class NewDB {
 	private static final String DATABASE_NAME = "DB_QL";
 	private static final int DATABASE_VERSION = 1;	

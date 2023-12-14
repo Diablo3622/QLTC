@@ -34,11 +34,6 @@ public class MenuScreen extends Activity {
 
                 }
 
-//				Toast.makeText(
-//				   getApplicationContext(),
-//				   ((TextView) v.findViewById(R.id.grid_item_label))
-//				   .getText(), Toast.LENGTH_SHORT).show();
-
             }
         });
 

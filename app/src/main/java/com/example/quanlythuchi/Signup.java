@@ -74,7 +74,6 @@ public class Signup extends Activity {
 		getMenuInflater().inflate(R.menu.signup, menu);
 		return true;
 	}
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();

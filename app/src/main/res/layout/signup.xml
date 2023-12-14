@@ -28,7 +28,6 @@
         android:layout_height="wrap_content"
         android:hint="Confirm Password"
         android:inputType="textPassword" />
-
     <Button
         android:id="@+id/btnCreateAccount"
         android:layout_width="fill_parent"

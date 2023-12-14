@@ -16,7 +16,6 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-
     Button btnSignIn,btnSignUp;
     //LoginDataBaseAdapter loginDataBaseAdapter;
 
