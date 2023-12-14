@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
-import com.example.qltc.adapter.ImageAdapter;
+import com.example.quanlythuchi.adapter.ImageAdapter;
 
 public class ThemThuChiScreen extends Activity {
 
