@@ -7,7 +7,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
-import com.example.qltc.R;
 
 public class MenuScreen extends Activity {
 

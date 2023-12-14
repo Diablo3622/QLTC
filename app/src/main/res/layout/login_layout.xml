@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
     android:background="@drawable/bgr">
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,13 +20,18 @@
             android:src="@drawable/safe" />
 
         <EditText
+            android:id="@+id/edtUserNameToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Tên đăng nhập"
             android:textSize="20dp"
             android:ems ="15"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp">
+
+            <requestFocus />
+        </EditText>
         <EditText
+            android:id="@+id/edtPasswordToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -44,6 +51,7 @@
             android:layout_marginBottom="20dp"
             />
     <Button
+        android:id="@+id/btnSignIn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Đăng nhập"
@@ -51,13 +59,13 @@
         android:backgroundTint="#3A566E"
 
         />
-        <Button
-            android:id="@+id/registerButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Đăng ký"
-            android:backgroundTint="#3A566E"
-            android:onClick="openRegisterLayout"
-            />
+<!--        <Button-->
+<!--            android:id="@+id/registerButton"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Đăng ký"-->
+<!--            android:backgroundTint="#3A566E"-->
+<!--            android:onClick="openRegisterLayout"-->
+<!--            />-->
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>
