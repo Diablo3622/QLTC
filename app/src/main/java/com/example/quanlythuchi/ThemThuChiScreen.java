@@ -16,7 +16,6 @@ public class ThemThuChiScreen extends Activity {
 
 	static final String[] TenTheLoai_OS = new String[] { 
 		"Thể Loại Thu", "Thể Loại Chi" };
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
