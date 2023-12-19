@@ -164,16 +164,34 @@ public class DBAdapter {
 		DBHelper.close();
 	}
 	
-	public boolean kiemTraLogin(String acc,String mk){
-		Cursor c = db.rawQuery("select * from "+CaNhanTable+" where "+username+" = ? and "+password+" = ?", new String[] { acc,mk });		
-		if(c.getCount()==1){
+//	public boolean kiemTraLogin(String acc,String mk){
+//		Cursor c = db.rawQuery("select * from "+CaNhanTable+" where "+username+" = ? and "+password+" = ?", new String[] { acc,mk });
+//		if(c.getCount()==1){
+//			c.close();
+//			return true;
+//		}else{
+//			c.close();
+//			return false;
+//		}
+//	}
+public boolean kiemTraLogin(String acc, String mk) {
+	// Kiểm tra nếu tên đăng nhập là "admin" và mật khẩu là "admin"
+	if (acc.equals("admin") && mk.equals("admin")) {
+		return true;
+	} else {
+		// Nếu không phải là tài khoản admin, thực hiện truy vấn SQL để kiểm tra thông tin đăng nhập
+		Cursor c = db.rawQuery("select * from " + CaNhanTable + " where " + username + " = ? and " + password + " = ?", new String[]{acc, mk});
+
+		// Kiểm tra số lượng bản ghi trả về từ truy vấn
+		if (c.getCount() == 1) {
 			c.close();
-			return true;			
-		}else{
+			return true;  // Nếu có một bản ghi trả về, thông tin đăng nhập là chính xác
+		} else {
 			c.close();
-			return false;
+			return false;  // Nếu không có hoặc nhiều hơn một bản ghi trả về, thông tin đăng nhập không chính xác
 		}
 	}
+}
 	/*----------------------------Thêm Người Dùng------------------------------*/
 	public long createUser(String userN, String matKhau) {       
 	    ContentValues cv = new ContentValues();
