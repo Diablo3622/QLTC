@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="314dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="2dip" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="2dip"
+            android:paddingRight="10dip" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="5dip"
+            android:paddingRight="10dip"
+            android:text="->" />
+
+        <TextView
+            android:id="@+id/txtTenKhoanChi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtSoTienKC"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:padding="5dip"
+            android:text="ten" />
+
+        <TextView
+            android:id="@+id/txtSoTienKC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/TextView03"
+            android:layout_toRightOf="@+id/txtSoTienKC"
+            android:padding="5dip"
+            android:text="222"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/txtNgayChi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtSoTienKC"
+            android:layout_alignTop="@+id/TextView03"
+            android:padding="5dip"
+            android:text="777" />
+
+        <TextView
+            android:id="@+id/txtTenKC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtTenKC"
+            android:layout_marginLeft="23dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="Tên khoản chi:"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:text="Ngày chi:" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtSoTienKC"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignBottom="@+id/txtSoTienKC"
+            android:layout_marginLeft="20dp"
+            android:text="Số tiền:"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
