@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // create a instance of SQLite Database
         //loginDataBaseAdapter=new LoginDataBaseAdapter(this);
         //loginDataBaseAdapter=loginDataBaseAdapter.open();
@@ -68,35 +67,20 @@ public class MainActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                // get The User name and Password
-                String userName=editTextUserName.getText().toString();
-                String password=editTextPassword.getText().toString();
+                // Lấy tên người dùng và mật khẩu
+                String userName = editTextUserName.getText().toString();
+                String password = editTextPassword.getText().toString();
 
-
+                // Kiểm tra đăng nhập
                 Boolean ktDangNhap = dbAdapter.kiemTraLogin(userName, password);
-                if(ktDangNhap){
+                if (ktDangNhap) {
                     Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
-                    Calendar c = Calendar.getInstance();
-                    String mm = String.valueOf(c.get(Calendar.MONTH) + 1);
-                    System.out.println(mm);
 
-                    //bat man hinh nhap luong
-                    String acc = dbAdapter.layIDND(userName);
-                    Boolean luong = dbAdapter.kiemTraNhapLuong(acc, mm);
-                    if(luong){
-                        Intent intentNhapLuong=new Intent(getApplicationContext(),Luong.class);
-                        startActivity(intentNhapLuong);
-                    }
-                    else{
-                        //Goi man hinh menu
-                        Intent intentMenu = new Intent(getApplicationContext(), MenuScreen.class);
-                        intentMenu.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intentMenu);
-                        //finish();
-                    }
-
-                }else{
+                    // Chuyển đến màn hình menu ngay sau khi đăng nhập thành công
+                    Intent intentMenu = new Intent(MainActivity.this, MenuScreen.class);
+                    startActivity(intentMenu);
+                } else {
                     Toast.makeText(MainActivity.this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show();
                 }
 

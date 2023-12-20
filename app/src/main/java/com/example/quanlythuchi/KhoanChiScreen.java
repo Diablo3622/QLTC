@@ -8,8 +8,6 @@ import android.widget.NumberPicker;
 import android.widget.TabHost;
 import android.widget.Toast;
 
-import com.example.quanlythuchi.R;
-
 import java.util.Calendar;
 
 public class KhoanChiScreen extends Activity {
@@ -18,15 +16,13 @@ public class KhoanChiScreen extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_khoan_chi_screen);
-
 		loadTabs();
-		NumberPicker yearPicker = findViewById(R.id.year);
+		NumberPicker yearPicker = findViewById(R.id.yearPicker);
 		yearPicker.setTextSize(50);
-		NumberPicker monthPicker = findViewById(R.id.month);
+		NumberPicker monthPicker = findViewById(R.id.monthPicker);
 		monthPicker.setTextSize(50);
-		NumberPicker dayPicker = findViewById(R.id.day);
+		NumberPicker dayPicker = findViewById(R.id.dayPicker);
 		dayPicker.setTextSize(50);
-
 		// Lấy năm hiện tại
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 
@@ -56,8 +52,6 @@ public class KhoanChiScreen extends Activity {
 		dayPicker.setOnValueChangedListener((picker, oldVal, newVal) -> {
 			// Không cần thực hiện xử lý ở đây, vì đã cập nhật trong sự kiện hoàn tất chọn
 		});
-
-		// Xử lý sự kiện khi người dùng hoàn tất việc chọn ngày tháng năm
 		dayPicker.setOnScrollListener(new NumberPicker.OnScrollListener() {
 			@Override
 			public void onScrollStateChange(NumberPicker picker, int scrollState) {
@@ -74,34 +68,46 @@ public class KhoanChiScreen extends Activity {
 		String date = year + "/" + month + "/" + day;
 		Toast.makeText(this, "Ngày tháng năm đã chọn: " + date, Toast.LENGTH_SHORT).show();
 
-
+		// Thực hiện các xử lý khác sau khi đã chọn ngày tháng năm
+		// Ví dụ: gọi hàm để cập nhật dữ liệu khác
+		// updateOtherData();
 	}
+
 
 	
 	
 	public void loadTabs() {
+		// L?y Tabhost id ra tru?c (cái này c?a built - in android
 		final TabHost tab = (TabHost) findViewById(android.R.id.tabhost);
+		// g?i l?nh setup
 		tab.setup();
 		TabHost.TabSpec spec;
+		// T?o tab1
 		spec = tab.newTabSpec("t1");
 		spec.setContent(R.id.tab1kc);
 		spec.setIndicator("1-Thêm Khoản Chi");
 		tab.addTab(spec);
+		// T?o tab2
 		spec = tab.newTabSpec("t2");
 		spec.setContent(R.id.tab2kc);
 		spec.setIndicator("2-Danh Sách Khoản Chi");
 		tab.addTab(spec);
+		// Thi?t l?p tab m?c d?nh du?c ch?n ban d?u là tab 0
 		tab.setCurrentTab(0);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.khoan_chi_screen, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;

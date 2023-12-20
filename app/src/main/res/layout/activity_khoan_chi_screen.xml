@@ -1,39 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <TabHost
-		 android:id="@android:id/tabhost"
-		 android:layout_width="match_parent"
-		 android:layout_height="match_parent" >
-		 <LinearLayout
-			 android:layout_width="match_parent"
-			 android:layout_height="match_parent"
-			 android:orientation="vertical" >
-		 <TabWidget
-			 android:id="@android:id/tabs"
-			 android:layout_width="match_parent"
-			 android:layout_height="wrap_content" >
-		 </TabWidget>
-		 <FrameLayout
-			 android:id="@android:id/tabcontent"
-			 android:layout_width="match_parent"
-			 android:layout_height="match_parent" >
-			 <LinearLayout
-				 android:id="@+id/tab1kc"
-				 android:layout_width="match_parent"
-				 android:layout_height="match_parent">
-				 <include layout="@layout/tab1_khoanchi"/>
-			 </LinearLayout>
-			 <LinearLayout
-				 android:id="@+id/tab2kc"
-				 android:layout_width="match_parent"
-				 android:layout_height="match_parent" >
-				 <include layout="@layout/tab2_khoanchi"/>
-			 </LinearLayout>
- 		</FrameLayout>
- 		</LinearLayout>
- 	</TabHost>
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<TabHost
+		android:id="@android:id/tabhost"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:padding="16dp"
+			android:background="#F5F5F5">
+
+			<TabWidget
+				android:id="@android:id/tabs"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="?attr/colorPrimary">
+
+			</TabWidget>
+
+			<FrameLayout
+				android:id="@android:id/tabcontent"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:background="#FFFFFF">
+
+				<LinearLayout
+					android:id="@+id/tab1kc"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<!-- Custom layout for tab 1 (tab1_khoanchi) -->
+					<include layout="@layout/tab1_khoanchi" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/tab2kc"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent">
+
+					<!-- Custom layout for tab 2 (tab2_khoanchi) -->
+					<include layout="@layout/tab2_khoanchi" />
+				</LinearLayout>
+			</FrameLayout>
+		</LinearLayout>
+	</TabHost>
 
 </LinearLayout>

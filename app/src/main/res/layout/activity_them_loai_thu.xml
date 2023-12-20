@@ -3,60 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.quanlythuchi.ThemLoaiThu" >
+    tools:context="com.example.quanlythuchi.ThemLoaiThu">
 
     <TextView
         android:id="@+id/txtLuongDaNhap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="@string/tieuDeLoaiThu" />
+        android:text="@string/tieuDeLoaiThu"
+        android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/txtTenLoaiThu"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTenLoaiThu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/txtLuongDaNhap"
-        android:layout_marginTop="16dp"
-        android:text="@string/tenTheLoaiThu" />
+        android:layout_marginTop="16dp">
 
-    <EditText
-        android:id="@+id/edtTenLoaiThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtTenLoaiThu"
-        android:layout_marginTop="34dp"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
+        <EditText
+            android:id="@+id/edtTenLoaiThu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tenTheLoaiThu"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnThemLoaiThu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/edtTenLoaiThu"
-        android:layout_marginRight="48dp"
+        android:layout_below="@+id/tilTenLoaiThu"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
         android:text="Thêm mới"
-        android:backgroundTint="#DA777777"/>
+        android:backgroundTint="#DA777777" />
 
     <ListView
         android:id="@+id/listViewLoaiThu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_height="0dp"
+        android:layout_below="@+id/btnThemLoaiThu"
+        android:layout_weight="1"
         android:background="#5E93AC"
-        android:layout_below="@+id/btnThemLoaiThu" >
-
-    </ListView>
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
 
 </RelativeLayout>

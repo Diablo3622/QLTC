@@ -12,13 +12,14 @@ import com.example.quanlythuchi.R;
 
 
 /*
-	Hien cac icon cho menu chinh
+	Hien cac icon cho menu them thu chi
 */
-public class ImageAdapter extends BaseAdapter {
+
+public class ImageThemThuChiAdapter extends BaseAdapter {
 	private Context context;
 	private final String[] mobileValues;
 
-	public ImageAdapter(Context context, String[] mobileValues) {
+	public ImageThemThuChiAdapter(Context context, String[] mobileValues) {
 		this.context = context;
 		this.mobileValues = mobileValues;
 	}
@@ -48,17 +49,11 @@ public class ImageAdapter extends BaseAdapter {
 
 			String mobile = mobileValues[position];
 
-			if (mobile.equals("Thể Loại Thu/Chi")) {
-				imageView.setImageResource(R.drawable.themtheloai);
-				
-			} else if (mobile.equals("Khoản Thu")) {
+			if (mobile.equals("Thể Loại Thu")) {
 				imageView.setImageResource(R.drawable.khoanthu);
-			} else if (mobile.equals("Khoản Chi")) {
+				
+			} else if (mobile.equals("Thể Loại Chi")) {
 				imageView.setImageResource(R.drawable.khoanchi);
-			} else if (mobile.equals("Thống Kê")) {
-				imageView.setImageResource(R.drawable.thongke);
-			} else {
-				imageView.setImageResource(R.drawable.luong);
 			}
 
 		} else {

@@ -3,61 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.quanlythuchi.ThemLoaiChi" >
-
-    <EditText
-        android:id="@+id/edtTenLoaiChi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtTenLoaiChi"
-        android:layout_below="@+id/txtTenLoaiChi"
-        android:layout_marginTop="21dp"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/btnThemLoaiChi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/edtTenLoaiChi"
-        android:layout_marginRight="36dp"
-        android:layout_marginTop="20dp"
-        android:text="Thêm mới"
-        android:backgroundTint="#DA777777"/>
+    tools:context="com.example.quanlythuchi.ThemLoaiChi">
 
     <TextView
         android:id="@+id/txtLuongDaNhap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="@string/tieuDeLoaiChi" />
+        android:text="@string/tieuDeLoaiChi"
+        android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/txtTenLoaiChi"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTenLoaiChi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLuongDaNhap"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/edtTenLoaiChi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tenLoaiChi"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnThemLoaiChi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/txtLuongDaNhap"
-        android:layout_marginLeft="17dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/tenLoaiChi" />
+        android:layout_below="@+id/tilTenLoaiChi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Thêm mới"
+        android:backgroundTint="#DA777777" />
 
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#5E93AC"
+        android:layout_height="0dp"
         android:layout_below="@+id/btnThemLoaiChi"
-        android:layout_centerHorizontal="true" >
-    </ListView>
+        android:layout_weight="1"
+        android:background="#5E93AC"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
 
 </RelativeLayout>

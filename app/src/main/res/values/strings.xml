@@ -19,4 +19,6 @@
     <string name="title_activity_them_loai_chi">ThemLoaiChi</string>
     <string name="tieuDeLoaiChi">Màn Hình Thể Loại Chi</string>
     <string name="tenLoaiChi">Tên Thể Loại Chi</string>
+    <string name="sign_in">Đăng nhập</string>
+    <string name="sign_up">Đăng ký</string>
 </resources>
